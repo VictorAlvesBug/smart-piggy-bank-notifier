@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "mqtt": "^4.3.7"
+  },
+  "name": "exemplo-mqtt-nodejs",
+  "description": "Exemplo de publisher e subscriber em node.js",
+  "version": "1.0.0",
+  "main": "pub.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
