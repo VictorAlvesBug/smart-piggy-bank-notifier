@@ -2,8 +2,8 @@
   "dependencies": {
     "mqtt": "^4.3.7"
   },
-  "name": "exemplo-mqtt-nodejs",
-  "description": "Exemplo de publisher e subscriber em node.js",
+  "name": "smart-piggy-bank-notifier",
+  "description": "Notificador do smart-piggy-bank para o Whatsapp com Node.js",
   "version": "1.0.0",
   "main": "pub.js",
   "scripts": {
