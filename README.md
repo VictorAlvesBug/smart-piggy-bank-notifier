@@ -21,5 +21,6 @@ $ node notifier.js --phone=<seu_celular> --apikey=<sua_apikey>
 ficando no seguinte formato: 5511912345678
 
 Referências:
+ - [Projeto smart-piggy-bank](https://github.com/VictorAlvesBug/smart-piggy-bank)
  - [API do CallMeBot](https://www.callmebot.com/blog/free-api-whatsapp-messages/)
  - [Integração Interfone-Whatsapp](https://github.com/EijiTomonari/interfone-whatsapp)
