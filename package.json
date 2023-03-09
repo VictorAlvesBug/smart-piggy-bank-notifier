@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "mqtt": "^4.3.7"
+    "mqtt": "^4.3.7",
+    "node-fetch": "^2.6.9"
   },
   "name": "smart-piggy-bank-notifier",
   "description": "Notificador do smart-piggy-bank para o Whatsapp com Node.js",

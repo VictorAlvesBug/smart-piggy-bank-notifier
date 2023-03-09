@@ -5,7 +5,9 @@ Sistema desenvolvido em **node.js**, responsável por notificar via **Whatsapp**
 quando uma **mensagem for publicada** no tópico MQTT do **smart-piggy-bank**
 
 Para testar, é necessário primeiro enviar a mensagem 
-**I allow callmebot to send me messages** para o [**WhatsApp do CallMeBot**](https://api.whatsapp.com/send?phone=34621342227&text=I%20allow%20callmebot%20to%20send%20me%20messages), para **habilitar** o recebimento de mensagens.
+**I allow callmebot to send me messages** para o 
+[**WhatsApp do CallMeBot**](https://api.whatsapp.com/send?phone=34621342227&text=I%20allow%20callmebot%20to%20send%20me%20messages), para **habilitar** o 
+recebimento de mensagens.
 
 Após receber a mensagem "**CallMeBot API Activated for ...**", anote seu apikey
 e execute o comando abaixo no **Terminal**, informando seu celular e sua apikey:
