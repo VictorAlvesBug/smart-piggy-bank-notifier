@@ -15,7 +15,16 @@ function main(){
         inscreverTopico({
             urlBroker, 
             nomeTopico, 
-            callback: (mensagem) => {
+            callback: (message) => {
+                
+                const listaTiposAlteracaoNotificarTagoIo = ['DEPOSITO', 'RETIRADA'];
+
+                const [tipoAlteracao, valorAtual, mensagem] = message.split('@');
+
+                if(listaTiposMensagemNotificarTagoIo.includes(tipoAlteracao)){
+                    notificarTagoIo(tipoAlteracao, valorAtual);
+                }
+
                 enviarMensagemWhatsapp(phone, apikey, mensagem)
                     .then(result => {
                         if(result.status === 200){
@@ -86,11 +95,12 @@ function inscreverTopico({urlBroker, nomeTopico, callback}){
     });
 }
 
-function enviarMensagemWhatsapp(phone, apikey, mensagem){
+function enviarMensagemWhatsapp(phone, apikey, message){
     return new Promise((resolve, reject) => {
+
         const paramUrlServidor = 'https://api.callmebot.com/whatsapp.php?';
         const paramCelular = `phone=${phone}`;
-        const paramMensagem = `&text=${mensagem}`;
+        const paramMensagem = `&text=${message}`;
         const paramApiKey = `&apikey=${apikey}`;
         
         const requestUrl = `${paramUrlServidor}${paramCelular}${paramMensagem}${paramApiKey}`;
@@ -99,4 +109,8 @@ function enviarMensagemWhatsapp(phone, apikey, mensagem){
             .then(retorno => resolve(retorno))
             .catch(err => reject(err));
     });
+}
+
+function notificarTagoIo(tipoAlteracao, valorAtual){
+    console.log(tipoAlteracao, valorAtual)
 }

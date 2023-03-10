@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@tago-io/sdk": "^10.10.0",
     "mqtt": "^4.3.7",
     "node-fetch": "^2.6.9"
   },
