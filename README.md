@@ -10,10 +10,13 @@ Para testar, é necessário primeiro enviar a mensagem
 recebimento de mensagens.
 
 Após receber a mensagem "**CallMeBot API Activated for ...**", anote seu apikey
-e execute o comando abaixo no **Terminal**, informando seu celular e sua apikey:
+e execute os comando abaixo no **Terminal**, informando seu celular e sua apikey:
 
 ```bash
-# Execute o notificador
+# Instalando as dependências do projeto
+$ npm install
+
+# Executeando o notificador
 $ node notifier.js --phone=<seu_celular> --apikey=<sua_apikey>
 ```
 
