@@ -22,7 +22,7 @@ function main(){
                 const [tipoAlteracao, valorAtual, mensagem] = message.split('@');
 
                 if(listaTiposMensagemNotificarTagoIo.includes(tipoAlteracao)){
-                    notificarTagoIo(tipoAlteracao, valorAtual);
+                    notificarTagoIo(valorAtual);
                 }
 
                 enviarMensagemWhatsapp(phone, apikey, mensagem)
@@ -111,6 +111,26 @@ function enviarMensagemWhatsapp(phone, apikey, message){
     });
 }
 
-function notificarTagoIo(tipoAlteracao, valorAtual){
+function notificarTagoIo(valorAtual){
+    const urlBrokerTagoIo = 'mqtt.tago.io';
+
+    const clientTagoIo = mqtt.connect({
+        port: 1883,
+        username: 'DeviceMQTT',
+        password: 'b026c8d3-ac69-498f-acbf-338bcc7ea136',
+        host: urlBrokerTagoIo
+    });
+
+
+    clientTagoIo.publish('tago/data/post', `{
+        "variable": "valorAtual",
+        "value": ${valorAtual}
+      }`);
     console.log(tipoAlteracao, valorAtual)
+
 }
+
+/*
+npm install --save @tago-io/sdk
+npm install -g @tago-io/builder
+*/
