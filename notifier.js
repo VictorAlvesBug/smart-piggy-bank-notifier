@@ -21,7 +21,7 @@ function main(){
 
                 const [tipoAlteracao, valorAtual, mensagem] = message.split('@');
 
-                if(listaTiposMensagemNotificarTagoIo.includes(tipoAlteracao)){
+                if(listaTiposAlteracaoNotificarTagoIo.includes(tipoAlteracao)){
                     notificarTagoIo(valorAtual);
                 }
 
